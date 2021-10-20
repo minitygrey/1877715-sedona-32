@@ -2,7 +2,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
+    src: url("fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
   }
   
@@ -10,16 +10,33 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/pt-sans-bold.woff2") format("woff2");
+    src: url("fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
+  }
+
+  ul,
+  li {
+    list-style: none;
   }
 
   .page-header {
     color: #000000;
     background: #FFFFFF;
   }
-  
-  body {
+
+  .navigation {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto ;
+  }
+
+  .navigation-list {
+    margin: 0;
+    padding: 0;
+    width: 1200px; 
+  }
+
+ body {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -40,9 +57,12 @@
     text-transform: none;
   }
 
-  .promo { 
-  background-image: url("img/index-background.jpg");
-  }
+  .page-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-image: url("../img/index-background.jpeg");
+  background-repeat: no-repeat;
+}
 
   .description {
     text-align: center;
@@ -64,7 +84,10 @@
   .advantages-list {
     text-align: center;
     vertical-align: top;
-    text-align: center;
+  }
+
+  .advantages-item {
+    display: flex;
   }
 
   .advantages-item.dark-blue {
@@ -73,9 +96,13 @@
     background: #83B3D3;
   }
 
+  .wrap {
+    width: 400px;
+  }
+
   .advantages-title.dark-blue {
     font-family: "PT Sans";
-    font-style: bold;
+    font-style: normal;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
@@ -84,28 +111,40 @@
     color: #FFFFFF;
   }
 
-  .advantages-number.dark-blue {
-    text-align: center;
-    vertical-align: top;
-    color: #FFFFFF;
-  }
-
+  .advantages-number.dark-blue,
   .advantages-description.dark-blue {
     text-align: center;
     vertical-align: top;
     color: #FFFFFF;
-  }
+  }  
 
   .home,
   .souvenir {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 24px;
     line-height: 28px;
+    width: 400px;
     background: rgba(131, 179, 211, 0.12);
   }
 
+  .blue {
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+   background: rgba(131, 179, 211, 0.2);
+  }
+
   .food {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 24px;
     line-height: 28px;
+    width: 400px;
     background: #FFFFFF;
   }
 
@@ -116,16 +155,29 @@
     line-height: 21px;
   }
 
-  .advantages-item.light-blue {
-    text-align: center;
-    vertical-align: top;
-    background: rgba(131, 179, 211, 0.12);
-  }
-
-.advantages-item.blue {
+.light-blue {
+  padding: 0;
   text-align: center;
   vertical-align: top;
-background: rgba(131, 179, 211, 0.2);
+  background: rgba(131, 179, 211, 0.12);
+  }
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.advantages-descriptio,
+.advantages-number {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-hotel {
@@ -137,10 +189,11 @@ background: rgba(131, 179, 211, 0.2);
 }
 
 .button-search {
-  font-style: bold;
+  font-style: normal;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
+  border-radius: 10px;
   color: #FFFFFF;
   background-color: #756257;
   text-decoration: none;
@@ -148,12 +201,24 @@ background: rgba(131, 179, 211, 0.2);
 }
 
 .main-inner {
-  background-image: url("catalog/catalog-background-1.jpg");
+  background-image: url("../img/catalog/catalog-background-1.jpeg");
+  background-repeat: no-repeat;
+}
+
+.catalog {
+  background-image: url("/Users/marinabulenok/Documents/download/1877715-sedona-32/img/catalog/catalog-background-1.jpeg");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.container {
+  display: flex;
 }
 
 .inner-header-title {
   font-family: PT Sans, sans-serif;
-  font-style: bold;
+  font-style: normal;
+  font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   text-align: left;
@@ -195,7 +260,7 @@ background: rgba(131, 179, 211, 0.2);
 
 .button-apply {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
@@ -215,13 +280,14 @@ background: rgba(131, 179, 211, 0.2);
 
 .hotel-choice {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   text-align: left;
   vertical-align: top;
   text-transform: uppercase;
   color: #000000;
+  width: 1200px;
 }
 
 .select-control {
@@ -242,17 +308,18 @@ background: rgba(131, 179, 211, 0.2);
 }
 
 .button-more {
-  font-style: bold;
+  font-style: normal;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
   vertical-align: top;
   color: #FFFFFF;
   background-color: #756257;
+  border-radius: 4px;
 }
 
 .button-favorite {
-  font-style: bold;
+  font-style: normal;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
@@ -262,14 +329,15 @@ background: rgba(131, 179, 211, 0.2);
   border-radius: 4px;
 }
 
-.button.button-light {
-  font-style: bold;
+.button-light {
+  font-style: normal;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
   vertical-align: top;
   color: #FFFFFF;
   background-color: #7DB54F;
+  border-radius: 4px;
 }
 
 .rating {
@@ -280,6 +348,7 @@ background: rgba(131, 179, 211, 0.2);
   text-transform: uppercase;
   background-color: #F2F2F2;
   border-radius: 4px;
+  width: 160px;
 }
 
 .button.pagination-show-more {
@@ -290,9 +359,15 @@ background: rgba(131, 179, 211, 0.2);
   vertical-align: center;
   color: #FFFFFF;
   background-color: #83B3D3;
+  width: 625px;
+  border-radius: 4px;
 }
 
-.pagination-curren {
+.pagination {
+  width: 55px;
+}
+
+.pagination-current {
   font-size: 20px;
   line-height: 26px;
   border-radius: 4px;
@@ -314,16 +389,23 @@ background: rgba(131, 179, 211, 0.2);
   vertical-align: top;
 }
 
-
-
-
+.page-footer-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .newsletter {
   font-size: 22px;
   font-weight: 400;
   color: #FFFFFF;
   text-align: center;
-  background-image: url("img/background-2.jpg");
+  background-image: url("../img/background-2.jpeg");
+  background-repeat: no-repeat;
+}
+
+.catalog-newsletter {
+  background-color: #fff;
+  width: 1200px;
 }
 
 .newsletter-title {
@@ -333,10 +415,11 @@ background: rgba(131, 179, 211, 0.2);
 }
 
 .button-footer {
-  font-style: bold;
+  font-style: normal;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
+  border-radius: 10px;
   color: #FFFFFF;
   background-color: #83B3D3;
   text-decoration: none;
@@ -353,6 +436,18 @@ background: rgba(131, 179, 211, 0.2);
   color: #000000;
 }
 
+.footer {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
 
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-
+.cover {
+  background-color: #fff;
+}
