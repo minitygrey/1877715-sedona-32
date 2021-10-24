@@ -27,12 +27,10 @@
   .navigation {
     display: flex;
     width: 1200px;
-    margin: 0 auto ;
+    
   }
 
   .navigation-list {
-    margin: 0;
-    padding: 0;
     width: 1200px; 
   }
 
@@ -40,7 +38,6 @@
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
-    text-align: center;
     color: #000000;
     background-color: #E5E5E5;
   }
@@ -57,16 +54,22 @@
     text-transform: none;
   }
 
+  .navigation-logo {
+    width: 138px;
+    margin-left: 151px;
+    margin-right: 209px;
+  }
+
   .page-container {
   width: 1200px;
-  margin: 0 auto;
+  text-align: center;
+  
   background-image: url("../img/index-background.jpeg");
   background-repeat: no-repeat;
 }
 
   .description {
     text-align: center;
-    vertical-align: top;
     background:  #ffffff;
   }
   
@@ -81,40 +84,26 @@
     background: #FFFFFF;
   } 
 
-  .advantages-list {
-    text-align: center;
-    vertical-align: top;
-  }
-
   .advantages-item {
     display: flex;
   }
 
   .advantages-item.dark-blue {
-    text-align: center;
     vertical-align: top;
     background: #83B3D3;
   }
 
-  .wrap {
-    width: 400px;
-  }
 
   .advantages-title.dark-blue {
     font-family: "PT Sans";
-    font-style: normal;
     font-size: 24px;
     line-height: 28px;
-    text-align: center;
-    vertical-align: top;
     background: #83B3D3;
     color: #FFFFFF;
   }
 
   .advantages-number.dark-blue,
   .advantages-description.dark-blue {
-    text-align: center;
-    vertical-align: top;
     color: #FFFFFF;
   }  
 
@@ -132,8 +121,6 @@
 
   .blue {
     padding: 0;
-    text-align: center;
-    vertical-align: top;
    background: rgba(131, 179, 211, 0.2);
   }
 
@@ -156,9 +143,6 @@
   }
 
 .light-blue {
-  padding: 0;
-  text-align: center;
-  vertical-align: top;
   background: rgba(131, 179, 211, 0.12);
   }
 
@@ -173,18 +157,9 @@
   line-height: 21px;
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .search-hotel {
   font-size: 30px;
   line-height: 36px;
-  text-align: center;
-  vertical-align: top;
   background: #FFFFFF;
 }
 
@@ -192,7 +167,6 @@
   font-style: normal;
   font-size: 20px;
   line-height: 36px;
-  text-align: center;
   border-radius: 10px;
   color: #FFFFFF;
   background-color: #756257;
@@ -208,7 +182,7 @@
 .catalog {
   background-image: url("/Users/marinabulenok/Documents/download/1877715-sedona-32/img/catalog/catalog-background-1.jpeg");
   background-repeat: no-repeat;
-  width: 100%;
+  width: 1200px;
 }
 
 .container {
@@ -217,74 +191,55 @@
 
 .inner-header-title {
   font-family: PT Sans, sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  text-align: left;
-  vertical-align: top;
   color: #FFFFFF;
 }
 
 .breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
-  text-align: left;
-  vertical-align: top;
   color: #FFFFFF;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
-  text-align: left;
-  vertical-align: top;
   color: #FFFFFF;
 }
 
 .control-label {
   font-size: 18px;
   line-height: 23px;
-  text-align: left;
-  vertical-align: top;
   color: #FFFFFF;
 }
 
 .catalog-filter-label {
   font-size: 18px;
   line-height: 23px;
-  text-align: left;
-  vertical-align: top;
   color: #FFFFFF;
 }
 
 .button-apply {
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  text-align: center;
-  vertical-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #83B3D3;
 }
 
 .button-throw {
-  font-style: normal;
   font-size: 18px;
   line-height: 23px;
-  text-align: center;
   color: #FFFFFF;
 }
 
 .hotel-choice {
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
-  text-align: left;
-  vertical-align: top;
   text-transform: uppercase;
   color: #000000;
   width: 1200px;
@@ -308,43 +263,32 @@
 }
 
 .button-more {
-  font-style: normal;
   font-size: 16px;
   line-height: 21px;
-  text-align: center;
-  vertical-align: top;
   color: #FFFFFF;
   background-color: #756257;
   border-radius: 4px;
 }
 
 .button-favorite {
-  font-style: normal;
   font-size: 16px;
   line-height: 21px;
-  text-align: center;
-  vertical-align: top;
   color: #FFFFFF;
   background-color: #83B3D3;
   border-radius: 4px;
 }
 
 .button-light {
-  font-style: normal;
   font-size: 16px;
   line-height: 21px;
-  text-align: center;
-  vertical-align: top;
   color: #FFFFFF;
   background-color: #7DB54F;
   border-radius: 4px;
 }
 
 .rating {
-  font-style: normal;
   font-size: 16px;
   line-height: 21px;
-  text-align: center;
   text-transform: uppercase;
   background-color: #F2F2F2;
   border-radius: 4px;
@@ -355,16 +299,15 @@
   font-size: 20px;
   line-height: 26px;
   border-radius: 4px;
-  text-align: center;
-  vertical-align: center;
   color: #FFFFFF;
   background-color: #83B3D3;
   width: 625px;
-  border-radius: 4px;
+  text-align: center;
 }
 
 .pagination {
   width: 55px;
+  display: flex;
 }
 
 .pagination-current {
@@ -385,20 +328,24 @@
 .sorting {
   font-size: 18px;
   line-height: 23px;
-  text-align: left;
-  vertical-align: top;
+}
+
+.page-footer {
+  text-align: center;
 }
 
 .page-footer-container {
   width: 1200px;
-  margin: 0 auto;
+}
+
+.catalog-page-footer {
+  text-align: center;
 }
 
 .newsletter {
   font-size: 22px;
   font-weight: 400;
   color: #FFFFFF;
-  text-align: center;
   background-image: url("../img/background-2.jpeg");
   background-repeat: no-repeat;
 }
@@ -415,10 +362,8 @@
 }
 
 .button-footer {
-  font-style: normal;
   font-size: 20px;
   line-height: 26px;
-  text-align: center;
   border-radius: 10px;
   color: #FFFFFF;
   background-color: #83B3D3;
@@ -427,11 +372,10 @@
 }
 
 .footer-contacts-address-phone {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
-  text-align: center;
   text-decoration: underline;
   color: #000000;
 }
@@ -439,7 +383,6 @@
 .footer {
   display: flex;
   width: 1200px;
-  margin: 0 auto;
   background-color: #fff;
 }
 
@@ -450,4 +393,28 @@
 
 .cover {
   background-color: #fff;
+}
+
+.catalog-right-column {
+  width: 1200px;
+}
+
+.checkbox-1 {
+  width: 170px;
+  padding-left: 75px;
+}
+
+.checkbox-2 {
+  width: 170px;
+  padding-left: 67px;
+}
+
+.filter-group {
+  width: 287px;
+  padding-left: 167px;
+}
+
+.catalog-button {
+  width: 160px;
+  padding-left: 81px;
 }
