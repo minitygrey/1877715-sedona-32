@@ -41,7 +41,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">Хочу сюда!</a>
+          <a class="navigation-there" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -53,8 +53,10 @@
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
-          <img src="img/catalog/home.svg" width="12" height="12" alt="Главная страница">
-          <img src="img/catalog/Vector.svg" width="12" height="6" alt="Стрелка">
+          <div class="img">
+            <img src="img/catalog/home.svg" width="12" height="12" alt="Главная страница">
+            <img src="img/catalog/Vector.svg" width="12" height="6" alt="Стрелка">
+          </div>
         </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link">Гостиницы</a>
@@ -66,7 +68,7 @@
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="checkbox-1">
-            <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <legend class="catalog-filter-style">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
@@ -92,7 +94,7 @@
             </ul>
           </fieldset>
           <fieldset class="checkbox-2">
-            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <legend class="catalog-filter-type">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
@@ -118,7 +120,7 @@
             </ul>
           </fieldset>
           <fieldset class="filter-group">
-            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+            <legend class="catalog-filter-price">Стоимость, ₽:</legend>
             <button class="range-toggle toggle-min" type="button">
               <span class="visually-hidden">Изменить минимальную цену</span>
             </button>
@@ -145,7 +147,7 @@
           <p class="find">Найдено гостиниц: 38</p>
           <form class="sorting-type">
             <label class="visually-hidden" for="sorting-1">Сортировка</label>
-            <select class="select-control" id="sorting-1" name="sort">
+            <select class="select" id="sorting-1" name="sort">
               <option value="cheap">Сначала дешевые</option>
               <option value="expensive">Сначала дорогое</option>
               <option value="popular">Сначала популярное</option>
@@ -337,7 +339,7 @@
           </li>
         </ul>
       </section>
-      <section class="footer-contscts">
+      <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <address class="footer-contacts-address">
           <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
