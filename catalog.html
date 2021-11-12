@@ -12,13 +12,13 @@
     <nav class="navigation">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="main-page.html">Главная</a>
+          <a class="navigation-link" href="main-page.html">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="about.sedona.html">О Седоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="hotel.html">Гостиницы</a>
+          <a class="navigation-link navigation-link-current-catalog" href="hotel.html">Гостиницы</a>
         </li>
       </ul>
       <div class="logo">
@@ -60,14 +60,20 @@
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
-          <div class="img">
-            <img class="main" src="img/catalog/home.svg" width="12" height="12" alt="Главная страница">
-            <img class="vector" src="img/catalog/Vector.svg" width="12" height="6" alt="Стрелка">
-          </div>
+          <a class="breadcrumbs-link" href="index.html">
+            <svg class="main" aria-hidden="true" focusable="false" width="12" height="12"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6 0.300049L0 5.80005V12H12V5.80005L6 0.300049ZM11 11H1V6.20005L6 1.70005L11 6.20005V11Z"
+                fill="white" />
+              <path d="M4 10H5V7.5H7V10H8V6.5H4V10Z" fill="white" />
+            </svg>
+            <span class="visually-hidden">Главная страница</span>
+          </a>
+          <img class="vector" src="img/catalog/Vector.svg" width="12" height="6" alt="Стрелка">
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Гостиницы</a>
+          <a class="breadcrumbs-link" href="#">Гостиницы</a>
         </li>
       </ul>
     </div>
@@ -81,21 +87,21 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
-                  <span class="control-label"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Бассейн</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
-                  <span class="control-label"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Парковка</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
-                  <span class="control-label"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Wi-Fi</span>
                 </label>
               </li>
@@ -107,40 +113,48 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="hotel" checked>
-                  <span class="control-label"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="motel">
-                  <span class="control-label"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="apartment">
-                  <span class="control-label"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter-group">
-            <legend class="catalog-filter-price">Стоимость, ₽:</legend>
-            <button class="range-toggle toggle-min" type="button">
-              <span class="visually-hidden">Изменить минимальную цену</span>
-            </button>
-            <button class="range-toggle toggle-max" type="button">
-              <span class="visually-hidden">Изменить максимальную цену</span>
-            </button>
-            <label class="catalog-filter-label">
-              от 0 <input class="catalog-filter-input" type="number" name="min-price">₽
-            </label>
-            <label class="catalog-filter-label">
-              до 9000 <input class="catalog-filter-input" type="number" name="max-price">₽
-            </label>
+            <legend class="catalog-filter-price">Стоимость,₽:</legend>
+            <div class="range">
+              <div class="range-wrapper-inputs">
+                <label class="catalog-filter-label">
+                  <input class="catalog-filter-input" type="number" name="min-price" placeholder="0 от">
+                </label>
+                <label class="catalog-filter-label">
+                  <input class="catalog-filter-input" type="number" name="max-price" placeholder="9000 до">
+                </label>
+              </div>
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0; right: 100px">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </fieldset>
           <div class="catalog-button">
             <button class="button-apply" type="submit">Применить</button>
@@ -154,12 +168,14 @@
         <div class="sorting-container">
           <p class="find">Найдено гостиниц: 38</p>
           <form class="sorting-type">
-            <label class="visually-hidden" for="sorting-1">Сортировка</label>
-            <select class="select" id="sorting-1" name="sort">
-              <option value="cheap">Сначала дешевые</option>
-              <option value="expensive">Сначала дорогое</option>
-              <option value="popular">Сначала популярное</option>
-            </select>
+            <div class="select">
+              <label class="visually-hidden" for="sorting-1">Сортировка</label>
+              <select class="select-control" id="sorting-1" name="sort">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогое</option>
+                <option value="popular">Сначала популярное</option>
+              </select>
+            </div>
             <button class="visually-hidden" type="submit">Отсортировать гостиницы</button>
           </form>
           <a href="#" class="button">
@@ -344,7 +360,7 @@
           <form class="sorting-type">
             <label class="visually-hidden" for="sorting-2">Сортировка</label>
             <p class="sorting">Гостиниц на странице:</p>
-            <select class="select-control" id="sorting-2" name="sort">
+            <select class="select-2" id="sorting-2" name="sort">
               <option value="one">1</option>
               <option value="two">2</option>
               <option value="three">3</option>
