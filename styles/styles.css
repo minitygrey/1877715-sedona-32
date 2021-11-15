@@ -1413,7 +1413,6 @@ grid-row: 1 / 2;
 .cart-item-title {
   margin: 0;  
   font-size: 18px;
-  line-height: 40px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
@@ -1511,7 +1510,11 @@ grid-row: 1 / 2;
 
 .one .auth-form-field{
   width: 420px;
+  height: 50px;
+  padding: 19px;
+  box-sizing: border-box;
 }
+
 .auth-form .field-group {
   margin: 0;
   margin-bottom: 40px;
@@ -1531,8 +1534,6 @@ grid-row: 1 / 2;
 
 .field-date, 
 .field-depature {
-  padding-left: 19px;
-  padding-right: 155px;
   background: #F2F2F2;
   border-radius: 4px;
   outline: none;
@@ -1545,7 +1546,7 @@ grid-row: 1 / 2;
   height: 20px;
   background-image: url("../img/tultip.svg");
   background-size: cover;
-  background-color: #000;
+  background-color: #000 ;
 }
 
 .auth-form-button {
